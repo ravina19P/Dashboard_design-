@@ -1,0 +1,97 @@
+.custom-placeholder::placeholder {
+    color: whitesmoke;
+}
+
+.layout-container {
+    display: flex;
+    flex-direction: column; 
+}
+
+.sidebar {
+    margin: 0;
+    padding: 0;
+    width: 80px;
+    background-color: #322f2f;
+    position: fixed;
+    height: 100%;
+    overflow: auto;
+    top: 0;
+    left: 0;
+    z-index: 1; 
+}
+
+.sidebar a {
+    display: block;
+    color: whitesmoke;
+    padding: 16px;
+    text-decoration: none;
+    text-align: center; 
+}
+
+.sidebar a.active {
+    color: #0dcaf0;
+}
+
+.sidebar a:hover:not(.active) {
+    background-color: #555;
+    color: black;
+}
+
+.content {
+    margin-left: 80px; 
+    flex-grow: 1; 
+    color: whitesmoke;
+    background-color: black;
+}
+
+@media screen and (max-width: 700px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    .content {
+        margin-left: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .sidebar a {
+        text-align: center;
+    }
+}
+
+.circle-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.circle-text {
+    position: absolute;
+    color: whitesmoke;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.Dashblock {
+    background-color: #555;
+    border-radius: 10px;
+    text-align: left;
+    padding: 10px;
+    margin: 10px;
+}
+
+.icon-item {
+    display: flex;
+    align-items: center; 
+    gap: 10px; 
+    padding: 10px; 
+    border-radius: 10px; 
+    margin-bottom: 0; 
+}
+
+.icon-item + small {
+    margin-top: 0; 
+}
